@@ -12,7 +12,6 @@ Group:          Development/Perl
 URL:            http://search.cpan.org/dist/%{module}
 Source:         http://www.cpan.org/modules/by-module/String/%{module}-%{version}.tar.bz2
 Buildrequires:  perl-devel
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 $factor = similarity $string1, $string2, [$limit] 
