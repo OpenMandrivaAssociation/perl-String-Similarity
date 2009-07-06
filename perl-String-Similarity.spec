@@ -1,7 +1,7 @@
 %define module  String-Similarity
 %define name    perl-%{module}
-%define version 1.03
-%define release %mkrel 5
+%define version 1.04
+%define release %mkrel 1
 
 Name:           %{name}
 Version:        %{version}
