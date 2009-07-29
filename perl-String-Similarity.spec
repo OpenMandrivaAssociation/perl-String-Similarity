@@ -1,18 +1,18 @@
-%define module  String-Similarity
-%define name    perl-%{module}
-%define version 1.04
-%define release %mkrel 1
+%define upstream_name    String-Similarity
+%define upstream_version 1.04
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
-Summary:        Perl extension for calculating the similarity of two strings
-License:        GPL or Artistic
-Group:          Development/Perl
-URL:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/String/%{module}-%{version}.tar.bz2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    Perl extension for calculating the similarity of two strings
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/String/%{upstream_name}-%{upstream_version}.tar.bz2
+
 Buildrequires:  perl-devel
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 $factor = similarity $string1, $string2, [$limit] 
@@ -33,7 +33,7 @@ the common case of searching for the most similar string from a set by
 specifing the maximum similarity found so far.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -55,4 +55,3 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/auto/String
 %{perl_vendorarch}/String
 %{_mandir}/*/*
-
