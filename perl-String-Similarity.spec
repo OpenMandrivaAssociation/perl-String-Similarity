@@ -55,3 +55,75 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/auto/String
 %{perl_vendorarch}/String
 %{_mandir}/*/*
+
+
+%changelog
+* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.40.0-3
++ Revision: 768358
+- svn commit -m mass rebuild of perl extension against perl 5.14.2
+
+* Tue Jul 20 2010 Jérôme Quelin <jquelin@mandriva.org> 1.40.0-2mdv2011.0
++ Revision: 556149
+- rebuild for perl 5.12
+
+* Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 1.40.0-1mdv2010.0
++ Revision: 404420
+- rebuild using %%perl_convert_version
+
+* Mon Jul 06 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.04-1mdv2010.0
++ Revision: 393001
+- update to new version 1.04
+
+* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 1.03-5mdv2009.0
++ Revision: 258392
+- rebuild
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 1.03-4mdv2009.0
++ Revision: 246477
+- rebuild
+
+* Tue Jan 15 2008 Thierry Vignaud <tv@mandriva.org> 1.03-2mdv2008.1
++ Revision: 152310
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+* Sun Jul 01 2007 Guillaume Rousse <guillomovitch@mandriva.org> 1.03-1mdv2008.0
++ Revision: 46534
+- update to new version 1.03
+
+
+* Tue Jul 11 2006 Guillaume Rousse <guillomovitch@mandriva.org> 1.02-2mdv2007.0
+- %%mkrel
+
+* Mon Jun 27 2005 Guillaume Rousse <guillomovitch@mandriva.org> 1.02-1mdk
+- New release 1.02
+
+* Tue Jun 07 2005 Guillaume Rousse <guillomovitch@mandriva.org> 1.01-2mdk 
+- drop useless empty directories
+- make test in %%check
+
+* Mon Apr 25 2005 Guillaume Rousse <guillomovitch@mandriva.org> 1.01-1mdk
+- new release
+- spec cleanup
+- better url
+
+* Mon Nov 15 2004 Michael Scherer <misc@mandrake.org> 1-3mdk
+- Rebuild for new perl
+
+* Wed Aug 04 2004 Guillaume Rousse <guillomovitch@mandrake.org> 1-2mdk 
+- rebuild
+
+* Wed Apr 21 2004 Guillaume Rousse <guillomovitch@mandrake.org> 1-1mdk
+- new version
+- rpmbuildupdate aware
+- make test
+
+* Wed Feb 25 2004 Guillaume Rousse <guillomovitch@mandrake.org> 0.02-2mdk
+- fixed dir ownership (distlint)
+
+* Wed Dec 17 2003 Guillaume Rousse <guillomovitch@mandrake.org> 0.02-1mdk
+- first mdk release
+
