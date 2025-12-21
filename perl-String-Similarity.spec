@@ -11,6 +11,7 @@ Group:      Development/Perl
 Url:        https://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/String/%{upstream_name}-%{upstream_version}.tar.bz2
 
+BuildRequires:	make
 Buildrequires:  perl-devel
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
