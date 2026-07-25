@@ -2,14 +2,14 @@
 %define upstream_version 1.04
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	5
+Version:    %{upstream_version}
+Release:	6
 
 Summary:    Perl extension for calculating the similarity of two strings
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/String/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:        https://metacpan.org/dist/String-Similarity
+Source0:    https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/String-Similarity-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 Buildrequires:  perl-devel
