@@ -1,15 +1,13 @@
 %define upstream_name    String-Similarity
-%define upstream_version 1.04
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:	6
+Version:    1.04
+Release:	7
 
 Summary:    Perl extension for calculating the similarity of two strings
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://metacpan.org/dist/String-Similarity
-Source0:    https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/String-Similarity-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/String-Similarity-%{version}.tar.gz
 
 BuildRequires:	make
 Buildrequires:  perl-devel
@@ -34,7 +32,7 @@ the common case of searching for the most similar string from a set by
 specifing the maximum similarity found so far.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -69,9 +67,7 @@ rm -rf %{buildroot}
 
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 1.40.0-1mdv2010.0
 + Revision: 404420
-- rebuild using %%perl_convert_version
-
-* Mon Jul 06 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.04-1mdv2010.0
+- rebuild using %1.04 Mon Jul 06 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.04-1mdv2010.0
 + Revision: 393001
 - update to new version 1.04
 
