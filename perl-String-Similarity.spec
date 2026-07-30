@@ -2,7 +2,7 @@
 %define upstream_version 1.04
 Name:       perl-%{upstream_name}
 Version:	1.04
-Release:	2
+Release:	3
 
 Summary:    Perl extension for calculating the similarity of two strings
 License:    GPL+ or Artistic
@@ -12,7 +12,6 @@ Source0:	https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/String-Similarity-1.
 
 BuildRequires:	make
 Buildrequires:  perl-devel
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 $factor = similarity $string1, $string2, [$limit] 
@@ -36,7 +35,7 @@ specifing the maximum similarity found so far.
 %setup -q -n String-Similarity-1.04
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
