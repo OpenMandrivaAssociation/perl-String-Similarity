@@ -2,7 +2,7 @@
 %define upstream_version 1.04
 Name:       perl-%{upstream_name}
 Version:	1.04
-Release:	3
+Release:	4
 
 Summary:    Perl extension for calculating the similarity of two strings
 License:    GPL+ or Artistic
@@ -43,6 +43,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 set +e
 %{__make} test
 :  # soft check
+make test || :
 %install
 rm -rf %{buildroot}
 %makeinstall_std
